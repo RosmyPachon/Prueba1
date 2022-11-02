@@ -1,19 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import "../assets/css/olvideclave.css"
 
 
-function OlvideClave() {
+function OlvideClave () {
   return (
     <div>
-      <div className="form-floating mb-3">
-        <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-        <label htmlFor="floatingInput">Email address</label>
-      </div>
-      <div className="form-floating">
-        <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-        <label htmlFor="floatingPassword">Password</label>
-      </div>
+      <div className='contenedor'>
+        <h1>Recupera tu contraseña</h1>
+        <form id='formulario' className='form-container'>
+          <div className='username'>
+            <input type="text" required/>
+            <label>Nombre de usuario</label>
+          </div>
+          <div className='contraseña'>
+            <input type="password" required/>
+            <label>Contraseña</label>
+          </div>
+          <NavLink to="/Registro">Si no tienes cuenta, regístrate</NavLink>
+          <input type="submit"/>
+          <div className='inicio'>
+            Quiero volver a <Link to="/">Iniciar sesión</Link>
+          </div>
+        </form>
+      </div>  
     </div>
   );
-}
+};
 
 export default OlvideClave
