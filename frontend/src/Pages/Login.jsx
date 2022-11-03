@@ -24,7 +24,7 @@ function Login() {
                 </div>      
                 <span className="form-line"></span>  
                 <div className="d-grid gap-2 col-6 mx-auto">
-                <button className="btn btn-primary">Ingresar</button>
+                <button className="ingresar">Ingresar</button>
       </div>
                 <div>
                     <NavLink to="/Registro">Si no tienes cuenta, regístrate</NavLink>

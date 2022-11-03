@@ -1,26 +1,32 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "../assets/css/olvideclave.css"
+import EmailIcon from '@mui/icons-material/Email';
 
 
 function OlvideClave () {
   return (
     <div>
-      <div className='contenedor'>
-        <h1>Recupera tu contraseña</h1>
-        <form id='formulario' className='form-container'>
-          <div className='username'>
+      <div className='contenedor-olvide'>
+        
+        <form id='formulario' className='form-container-olvide'>
+        <div className='icono-olvide'>
+          <EmailIcon sx={{fontSize: 45}}></EmailIcon>
+        </div>
+        <div id='title-olvide'>
+          <h1>Recupera tu contraseña</h1>
+        </div>
+       
+          <div className='correo'>
             <input type="text" required/>
-            <label>Nombre de usuario</label>
+            <label>Correo eletronico</label>
           </div>
-          <div className='contraseña'>
-            <input type="password" required/>
-            <label>Contraseña</label>
+          <button className="btn-olvide">Enviar</button>
+          <div className='enlace'>
+            <NavLink to="/Registro">Si no tienes cuenta, regístrate</NavLink>
           </div>
-          <NavLink to="/Registro">Si no tienes cuenta, regístrate</NavLink>
-          <input type="submit"/>
-          <div className='inicio'>
-            Quiero volver a <Link to="/">Iniciar sesión</Link>
+          
+          <div className='olvide'>
           </div>
         </form>
       </div>  
