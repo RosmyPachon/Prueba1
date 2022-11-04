@@ -29,7 +29,7 @@ function Registro() {
                 </div>
             </div>  
             <div>
-                <Link to="/Olvide-clave">¿olvidaste tu contraseña?</Link>
+                <Link to="/Olvide-clave">¿Olvidaste tu contraseña?</Link>
             </div>    
             <span className="form-line-registro"></span>  
             <div className="d-grid gap-2 col-6 mx-auto">

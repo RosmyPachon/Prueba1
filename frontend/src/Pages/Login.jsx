@@ -1,41 +1,83 @@
 import { NavLink} from 'react-router-dom';
 import "../assets/css/login.css"
+import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 
 
 function Login() {
   return (
     <div>           
-        <div> 
-         <div className="form-container">
-
-            <form id="formulario" className="form-registro">
-               <h2 className="form-title">Login</h2>
-                <div className="form-container">
-
-                    <div className="form-group">
-                    <i className="bi bi-person-fill" />
-			            <input type="text" id="user" className="form-input" placeholder="Usuario"></input>
-                	    <span className="form-line"></span>
-                    </div>
-                    <div className="form-group">
-                        <input className="form-input" type="password" id="contraseña" placeholder="Contraseña"></input>
-                        <span className="form-line"></span>
-                    </div>
-                </div>      
-                <span className="form-line"></span>  
-                <div className="d-grid gap-2 col-6 mx-auto">
-                <button className="ingresar">Ingresar</button>
-      </div>
-                <div>
-                    <NavLink to="/Registro">Si no tienes cuenta, regístrate</NavLink>
+        <div className='title-menu'>
+            <h1>Menú</h1>
+        </div>
+        <div className='pre-menu'>
+            <div id='card-menu' className="card" style={{width: '18rem'}}>
+                <img src="..\src\assets\img\menu1.jpg" className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="btn-menu">Go somewhere</a>
                 </div>
-                <div>
-                    <NavLink to="/Olvide-clave">¿olvidaste tu contraseña?</NavLink>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div id='card-menu' className="card" style={{width: '18rem'}}>
+                <img src="..\src\assets\img\menu1.jpg" className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="btn-menu">Go somewhere</a>
+                </div>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div id='card-menu' className="card" style={{width: '18rem'}}>
+                <img src="..\src\assets\img\menu1.jpg" className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="btn-menu">Go somewhere</a>
+                </div>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div id='card-menu' className="card" style={{width: '18rem'}}>
+                <img src="..\src\assets\img\menu1.jpg" className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="btn-menu">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div className='contenedor-login'>
+        
+            <form id='formulario' className='form-container-login'>
+                <div className='icono-login'>
+                    <AccountCircleTwoToneIcon sx={{fontSize: 45}}></AccountCircleTwoToneIcon>
+                </div>
+                <div id='title-login'>
+                    <h1>Inicia sesión</h1>
+                </div>
+        
+                <div className='username'>
+                    <input type="text" required/>
+                    <label>Usuario</label>
+                </div>
+                <div className='password'>
+                    <input type="password" required/>
+                    <label>Contraseña</label>
+                </div>
+
+                <div className='enlace-login'>
+                    <NavLink to="/Olvide-clave">¿Olvidaste tu contraseña?</NavLink>
+                </div>
+
+                <button className="btn-login">Enviar</button>
+                <div className='enlace-login'>
+                    <NavLink to="/Registro">¿No tienes cuenta? regístrate</NavLink>
+                </div>
+                
+                <div className='olvide'>
+
                 </div>
             </form>
         </div>
-    </div>
-        
     </div>
   )
 }
