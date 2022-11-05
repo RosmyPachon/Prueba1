@@ -1,49 +1,47 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import "../assets/css/registro.css"
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 
 
 function Registro() {
   return (
-    <div><div>           
-    <div> 
-     <div className="form-container">
-
-        <form id="formulario" className="form-registro">
-           <h2 className="form-title-registro">Registro</h2>
-            <div className="form-container-registro">
-
-                <div className="form-group-registro">
-                  <i className="bi bi-person-fill" />
-                  <input type="text" id="user" className="form-input" placeholder="Nombre"></input>
-                  <span className="form-line-registro"></span>
-                </div>
-                <div className="form-group-registro">
-                  <i className="bi bi-person-fill" />
-                  <input type="text" id="user" className="form-input" placeholder="Correo eletrónico"></input>
-                  <span className="form-line-registro"></span>
-                </div>
-                <div className="form-group-registro">
-                    <input className="form-input" type="password" id="contraseña" placeholder="Nueva contraseña"></input>
-                    <span className="form-line-registro"></span>
-                </div>
-            </div>  
-            <div>
-                <Link to="/Olvide-clave">¿Olvidaste tu contraseña?</Link>
-            </div>    
-            <span className="form-line-registro"></span>  
-            <div className="d-grid gap-2 col-6 mx-auto">
-            <button className="btn-registro">Registrar</button>
-  </div>
-            <div>
-                <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>
-            </div>
-            
+    <div>
+      <div className='contenedor-registro'>
+        
+        <form id='formulario' className='form-container-registro'>
+        <div className='icono-registro'>
+          <HowToRegIcon sx={{fontSize: 45}}></HowToRegIcon>
+        </div>
+        <div id='title-registro'>
+          <h1>Regístrate</h1>
+        </div>
+          <div className='nombre'>
+            <input type="text" required/>
+            <label>Nombre completo</label>
+          </div>
+          <div className='correo-registro'>
+            <input type="text" required/>
+            <label>Correo eletronico</label>
+          </div>
+          <div className='telefono'>
+            <input type="number" required/>
+            <label>Número de telefono</label>
+          </div>
+          <div className='fecha-nacimiento'>
+            <h1>Fecha nacimiento</h1>
+          </div>
+          <div className='input-fecha'>
+            <input type="date" required/>
+          </div>
+            <button className="btn-registro">Enviar</button>
+          <div className='enlace'>
+            <NavLink to="/">¿Ya tienes cuenta? Inicia sesión</NavLink>
+          </div>
+          
         </form>
+      </div>  
     </div>
-</div>
-    
-</div></div>
   )
 }
 

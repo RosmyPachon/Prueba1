@@ -45,7 +45,7 @@ body{
 
 form .username{
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid white;
   margin: 25px 0;
 }
 
@@ -88,8 +88,14 @@ form .username{
 
 form .password{
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid white;
   margin: 25px 0;
+}
+
+hr{
+  background-color: #6C3483;
+  width: 1000px;
+  margin-top: 50px;
 }
 
 .password input{

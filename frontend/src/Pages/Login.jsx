@@ -77,6 +77,7 @@ function Login() {
 
                 </div>
             </form>
+            <hr />
         </div>
     </div>
   )
